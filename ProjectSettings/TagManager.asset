@@ -8,6 +8,7 @@ TagManager:
   - plats
   - spikes
   - level layout
+  - player
   layers:
   - Default
   - TransparentFX

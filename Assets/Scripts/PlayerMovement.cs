@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    bool isDead = false;
     // need to create a reference to rigid body to use rigid body component in unity
     // rigid body is used to apply forces (move player left and right)
     private Rigidbody2D rbody;
@@ -36,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(isDead){
+
+            return;
+        }
+
         horizontalInput = Input.GetAxis("Horizontal"); // x coordinate value
 
         // use velocity to change how fast player moves and in what direction
@@ -109,5 +115,12 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Running", false);
         }
     }
+
+    public void Die(){
+
+        isDead = true;
+        FindObjectOfType<LevelManager>().Restart();
+    }
+
 }
 
