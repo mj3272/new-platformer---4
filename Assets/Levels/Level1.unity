@@ -157,10 +157,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d4ad9b2fc7f4b22b7d27ad05697a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 10
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
 --- !u!61 &15086942
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -269,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 15086940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.7, y: -1.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 519420032}
@@ -321,7 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53188282}
   - component: {fileID: 53188281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plat3
   m_TagString: plats
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68929098}
   - component: {fileID: 68929097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plat1
   m_TagString: plats
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68929096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -2.48, z: 0}
+  m_LocalPosition: {x: -2, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16323,7 +16323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 994860904}
   - component: {fileID: 994860902}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18278,7 +18278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521370998}
   - component: {fileID: 1521370997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plat2
   m_TagString: plats
   m_Icon: {fileID: 0}
