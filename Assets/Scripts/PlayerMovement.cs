@@ -54,15 +54,16 @@ public class PlayerMovement : MonoBehaviour
         // flip player if they move left or right
         if (horizontalInput > 0.01f) // moving right
         {
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            transform.localScale = new Vector3(0.650f, 0.65f, 0.65f);
+            //transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         }
         else if (horizontalInput < -0.01f) // moving left
         {
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+            transform.localScale = new Vector3(-0.65f, 0.65f, 0.65f);
+            //transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         }
 
-             
-        // check if space bar is used to jump and if on the ground
+        // jumping 
         if (Input.GetKey(KeyCode.Space) && IsGrounded())
         {
             Jump();
@@ -76,7 +77,8 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         // change the y coordinate, keep the x coordinate the same
-        rbody.velocity = new Vector2(rbody.velocity.x, 7.0f);
+        // rbody.velocity = new Vector2(rbody.velocity.x, 7.0f);
+        rbody.velocity = new Vector2(rbody.velocity.x, speed);
     }
 
     // to make sure you can only jump when on the ground (to prevent jumping out of screen)
