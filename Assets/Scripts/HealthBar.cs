@@ -9,6 +9,8 @@ public class HealthBar : MonoBehaviour
     public Image fillBar;
     public float health;
 
+    [SerializeField] private AudioSource hurtSound;
+    [SerializeField] private AudioSource deathSound;
 
     public void LoseHealth(int value){
 
@@ -21,11 +23,13 @@ public class HealthBar : MonoBehaviour
         health -= value;
         //refresh the bar
         fillBar.fillAmount = health/100;
+
+        hurtSound.Play();
         //check if health is 0 or less -> dead
         if(health<=0){
 
-            FindObjectOfType<PlayerMovement>().Die();
-            //Debug.Log("you died");
+            deathSound.Play();
+            Invoke("ZeroHealth", 1.2f);
             
 
         }
@@ -33,15 +37,11 @@ public class HealthBar : MonoBehaviour
 
     }
 
-    private void Update(){
+    private void ZeroHealth(){
+        
+        FindObjectOfType<PlayerMovement>().Die();
+        //Debug.Log("you died");
 
-
-/*
-        if(Input.GetKeyDown(KeyCode.Return)){
-
-            LoseHealth(25);
-        }
-*/
     }
 
 

@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     // Creating reference to animator - Matias
     private Animator anim;
 
+    [SerializeField] private AudioSource jumpSound;
 
     private void Awake()
     {
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         // jumping 
         if (Input.GetKey(KeyCode.Space) && IsGrounded())
         {
+            jumpSound.Play();
             Jump();
         }
 

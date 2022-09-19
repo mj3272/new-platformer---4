@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+
+    [SerializeField] private AudioSource coinSound;
+
     public int coinValue = 1;
     void OnTriggerEnter2D(Collider2D other){
 
         if(other.gameObject.CompareTag("Player")){
 
+            coinSound.Play();
             ScoreManagerScript.instance.ChangeScore(coinValue);
         }
 
